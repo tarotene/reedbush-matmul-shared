@@ -1,0 +1,22 @@
+==31514== NVPROF is profiling process 31514, command: ./../bin/main
+==31514== Profiling application: ./../bin/main
+==31514== Profiling result:
+Time(%)      Time     Calls       Avg       Min       Max  Name
+ 44.38%  61.083ms         1  61.083ms  61.083ms  61.083ms  MatMulKernel(Matrix, Matrix, Matrix)
+ 28.70%  39.497ms         2  19.749ms  19.722ms  19.775ms  [CUDA memcpy DtoH]
+ 14.97%  20.596ms         1  20.596ms  20.596ms  20.596ms  MatMulKernel_Shared(Matrix, Matrix, Matrix)
+ 11.95%  16.445ms         4  4.1111ms  3.9752ms  4.2727ms  [CUDA memcpy HtoD]
+
+==31514== API calls:
+Time(%)      Time     Calls       Avg       Min       Max  Name
+ 66.06%  312.53ms         6  52.089ms  297.97us  310.95ms  cudaMalloc
+ 29.66%  140.35ms         6  23.391ms  4.0246ms  82.027ms  cudaMemcpy
+  3.89%  18.381ms         6  3.0635ms  180.10us  17.425ms  cudaFree
+  0.23%  1.0990ms       182  6.0380us     161ns  232.21us  cuDeviceGetAttribute
+  0.12%  568.46us         2  284.23us  282.12us  286.35us  cuDeviceTotalMem
+  0.02%  97.134us         2  48.567us  37.150us  59.984us  cudaLaunch
+  0.02%  93.736us         2  46.868us  43.953us  49.783us  cuDeviceGetName
+  0.00%  6.9350us         6  1.1550us     180ns  4.7560us  cudaSetupArgument
+  0.00%  2.8600us         2  1.4300us  1.4200us  1.4400us  cudaConfigureCall
+  0.00%  2.1910us         3     730ns     193ns  1.4000us  cuDeviceGetCount
+  0.00%  2.1420us         6     357ns     194ns     624ns  cuDeviceGet

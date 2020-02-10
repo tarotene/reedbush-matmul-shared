@@ -1,0 +1,2 @@
+Elapsed time[s] for GPU shared-matmul: 0.462685
+Elapsed time[s] for GPU matmul: 0.015406
